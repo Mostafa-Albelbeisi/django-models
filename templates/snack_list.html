@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Snack name:</h1>
+
+    
+    {% for Snack in object_list %}
+        <h3> {{ Snack.name}}</h3>
+    {% endfor %} 
+
+
+{% endblock content%}

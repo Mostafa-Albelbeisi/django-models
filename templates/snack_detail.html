@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>It's not complete</h1>
+
+
+{% for Snack in object_list %}
+    <h3>{{Snack.description}}</h3>
+{% endfor %}
+
+{% endblock content%}
