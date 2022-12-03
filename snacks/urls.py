@@ -1,9 +1,9 @@
-from django.urls import path, include
-from .views import Home, SnackDetail, SnackList, About
+from django.urls import path
+from .views import HomePage, SnackListView, SnackDetail
 
-urlpatterns = [
-    path("", Home.as_view(), name="home"),
-    path("snackDetail", SnackDetail.as_view(), name="snackDetail"),
-    path("snackList", SnackList.as_view(), name="snackList"),
-    path("about", About.as_view(), name="about"),
+urlpatterns=[
+    path('',HomePage.as_view(), name='home'),
+    path('snacks/',SnackListView.as_view(), name='snacks' ),
+    path('snacks/<int:pk>',SnackDetail.as_view(), name='detail')
+
 ]
